@@ -1,0 +1,59 @@
+<div class="search-container">
+  <input class="search-input " type="text" placeholder="Search for products...." [(ngModel)]="searchTerm"
+    (keyup)="search($event)" />
+  <span class="search-span">
+    <svg viewBox="0 0 16 16" fill="none" class="search-svg" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="6.5" cy="6.5" r="5.75" stroke="#FBFBFE" stroke-width="1.5" />
+      <line x1="11.0607" y1="11" x2="15" y2="14.9393" stroke="#FBFBFE" stroke-width="1.5" stroke-linecap="round" />
+    </svg>
+  </span>
+
+  <svg class="search-span" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+    style="enable-background:new 0 0 512 512;" xml:space="preserve">
+    <g>
+      <g>
+        <path
+          d="M8.959,0v81.89l201.666,201.666V512l90.75-60.5V283.556L503.041,81.89V0H8.959z M271.125,435.31l-30.25,20.167V292.416
+     h30.25V435.31z M279.985,262.166h-47.969L60.6,90.75h390.802L279.985,262.166z M472.791,60.5H39.209V30.25h433.582V60.5z" />
+      </g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+    <g>
+    </g>
+  </svg>
+
+
+
+</div>
+<div class="no-results" *ngIf="productCount===0">
+  <h2>Sorry, no results found!</h2>
+  <p> Please check the spelling or try searching for something else</p>
+</div>

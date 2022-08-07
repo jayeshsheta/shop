@@ -1,0 +1,18 @@
+<div class="product">
+  <p class="product-details__topName">{{ product.name }}</p>
+
+  <div class="product-image-holder">
+    <img src="/assets/images/default.png" (error)="setAltImg()" [alt]="product.name" class="product-image" />
+  </div>
+  <div class="product-details">
+    <p class="product-details__price">Rs {{ product.price }}</p>
+     <button *ngIf="!product.inCart" class="product-details__addBtn" (click)="addToCart(product)">Add to cart</button>
+    <div *ngIf="product.inCart" class="button-grp">
+      <button  class="product-details__addBtn" (click)="removeFromCart(product)">-</button>
+      <input class="qtyText" type="text" value="{{product.inCartQty}}"/>
+      <button class="product-details__addBtn" (click)="addToCart(product)">+</button>
+    </div>
+
+    <!-- <span class="badge" *ngIf="product.ItemLeft<=2">Low Stock</span> -->
+  </div>
+</div>

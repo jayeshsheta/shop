@@ -1,0 +1,15 @@
+<header>
+  <div class="brand">
+    <img src="/assets/images/brand.png" alt="avatar" />
+    <h5>Shop</h5>
+  </div>
+  <div class="nav">
+    <ul>
+      <li (click)="navigateToCart()">
+        <img src="/assets/images/add-to-cart.png" alt="cart" />
+        <span class="badge" >{{cartCount}} </span>
+        <span class="total">Total: {{totalVal}} </span>
+      </li>
+    </ul>
+  </div>
+</header>

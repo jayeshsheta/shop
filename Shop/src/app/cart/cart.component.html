@@ -1,0 +1,28 @@
+<div class="cart-container">
+  <h1>Shopping Cart</h1>
+  <div class="cart-card" *ngFor="let item of cartItems">
+    <div class="img-container">
+      <img src="/assets/images/default.png" (error)="setAltImg()" alt="" />
+    </div>
+    <div class="product-info">
+      <p>{{item.name}}</p>
+      <p class="small">Rs {{item.price}}</p>
+    </div>
+
+
+    <div class="ddl">
+      <select [(ngModel)]="item.inCartQty" (change)="onQtyChange(item)">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <div>
+      <button class="btn" (click)="onDelete(item)">Delete</button>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    box-shadow: grey 0px 0px 4px 2px;
+    margin: 30px;
+    padding: 10px;
+
+    @media screen and (max-width :767px) {
+        // display: none;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+    }
+
+}

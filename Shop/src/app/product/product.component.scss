@@ -1,0 +1,144 @@
+%button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.product-image-holder {
+  margin: 22px;
+}
+
+.product {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 30px 15px 30px 0;
+  width: 286px;
+  max-height: 400px;
+  height: 265px;
+  position: relative;
+  background:#fff;
+
+  .product-actions {
+    display: flex;
+  }
+
+  &:hover {
+    // transform: scale(1.05);
+    border: 1px solid #35BADB;
+    padding-bottom: 10px;
+  }
+
+  &-image {
+    max-width: 100%;
+    width: 300px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  &-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;
+
+    &__price {
+      font-weight: bold;
+      opacity: 0.7;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    &__name {
+      opacity: 0.8;
+      font-weight: 500;
+      margin: 0;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin: 5px;
+      padding: 3px;
+      // background: black;
+      color: black;
+    }
+
+    &__topName {
+      font-weight: bold;
+      margin: 1px;
+      padding: 1px;
+      left: 25px;
+      position: absolute;
+      color: black;
+    }
+    &__addBtn{
+      background: black;
+      color: white;
+      padding: 6px;
+      border: gray;
+      box-sizing: border-box;
+  }
+  }
+
+  &-description {
+    padding: 10px 15px;
+
+    p {
+      opacity: 0.6;
+      margin: 0;
+    }
+  }
+
+  &-actions {
+    display: none;
+    justify-content: flex-end;
+    padding: 0 15px;
+
+    &__add {
+      @extend %button;
+      border: 2px solid rgb(52, 186, 219);
+    }
+
+    &__remove {
+      @extend %button;
+      border: 2px solid indianred;
+    }
+  }
+}
+
+.badge {
+  height: 20px;
+  width: 50px;
+  font-size: 11px;
+  color: white;
+  background-color: #db354b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: -10px;
+  border-radius: 50%;
+}
+.button-grp
+{
+  display: flex;
+}
+.qtyText{
+  text-align: center;
+  background: black;
+  color: white;
+  border: black;
+  width: 25px;
+}

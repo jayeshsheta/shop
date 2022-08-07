@@ -1,0 +1,9 @@
+<div class="filter-container" >
+  <ng-container *ngFor="let filter of filters; let i = index">
+    <h1>{{filter.label}}</h1>
+    <div *ngFor="let option of filter.options; let i = index">
+      <input type="checkbox" [attr.id]="option" [(ngModel)]="filter.values[i]" (change)="onFilter($event,filter.label)"/>
+      <label [attr.for]="option"> {{ option }}</label>
+    </div>
+  </ng-container>
+</div>
